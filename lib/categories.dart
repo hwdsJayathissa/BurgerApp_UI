@@ -38,14 +38,14 @@ class _CategoriesState extends State<Categories> {
                         color: index == currentSelectedItem
                             ? Colors.black
                             : Colors.white,
-                        child: Icon(Icons.fastfood,
-                            color: index == currentSelectedItem
-                                ? Colors.white
-                                : Colors.black),
                         elevation: 3,
                         margin: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25)),
+                        child: Icon(Icons.fastfood,
+                            color: index == currentSelectedItem
+                                ? Colors.white
+                                : Colors.black),
                       ),
                     ),
                   )

@@ -3,7 +3,7 @@ import 'burger_page.dart';
 
 class HamburgerList extends StatefulWidget {
   final int row;
-  const HamburgerList({Key? key, required this.row}) : super(key: key);
+  const HamburgerList({super.key, required this.row});
 
   @override
   State<HamburgerList> createState() => _HamburgerListState();
@@ -48,6 +48,15 @@ class _HamburgerListState extends State<HamburgerList> {
                         },
                         child: Card(
                           color: Theme.of(context).primaryColor,
+                          elevation: 3,
+                          margin: EdgeInsets.all(15),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(45),
+                                bottomRight: Radius.circular(15),
+                                topLeft: Radius.circular(45),
+                                topRight: Radius.circular(45)),
+                          ),
                           child: Padding(
                             padding: const EdgeInsets.only(top: 20),
                             child: Column(
@@ -72,7 +81,7 @@ class _HamburgerListState extends State<HamburgerList> {
                                       ),
                                     ),
                                     Spacer(),
-                                    Container(
+                                    SizedBox(
                                       height: 50,
                                       width: 50,
                                       child: Card(
@@ -87,15 +96,6 @@ class _HamburgerListState extends State<HamburgerList> {
                                 )
                               ],
                             ),
-                          ),
-                          elevation: 3,
-                          margin: EdgeInsets.all(15),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(45),
-                                bottomRight: Radius.circular(15),
-                                topLeft: Radius.circular(45),
-                                topRight: Radius.circular(45)),
                           ),
                         ),
                       ),
